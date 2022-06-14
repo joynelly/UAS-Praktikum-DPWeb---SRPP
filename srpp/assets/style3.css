@@ -1,0 +1,609 @@
+/* 
+---------------------------------------------
+font & reset css
+--------------------------------------------- 
+*/
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+/* 
+---------------------------------------------
+reset
+--------------------------------------------- 
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
+pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
+s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+figure, header, nav, section, article, aside, footer, figcaption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+html {
+  /* border-box box model allows us to add padding and border to our elements without increasing their size */
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clearfix {
+  display: inline-block;
+}
+
+html[xmlns] .clearfix {
+  display: block;
+}
+
+* html .clearfix {
+  height: 1%;
+}
+
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+header, nav, section, article, aside, footer, hgroup {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  background-color: #fff;
+  font-size: 16px;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none !important;
+  color: #86cbed;
+}
+
+a:hover {
+	color: #A0DEEE;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+ul {
+  margin-bottom: 0px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 25px;
+  color: #2a2a2a;
+}
+
+img {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* 
+---------------------------------------------
+global styles
+--------------------------------------------- 
+*/
+html,
+body {
+  background: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+::selection {
+  background: #00a8a8;
+  color: #fff;
+}
+
+::-moz-selection {
+  background: #00a8a8;
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  html, body {
+    overflow-x: hidden;
+  }
+  .mobile-top-fix {
+    margin-top: 30px;
+    margin-bottom: 0px;
+  }
+  .mobile-bottom-fix {
+    margin-bottom: 30px;
+  }
+  .mobile-bottom-fix-big {
+    margin-bottom: 60px;
+  }
+}
+
+/* 
+---------------------------------------------
+header
+--------------------------------------------- 
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+  background: #f2f2f2;
+}
+nav{
+  background: #1f6280;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 100px;
+}
+nav .logo{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+nav .nav-items{
+  display: flex;
+  flex: 0;
+  padding: 0 0 0 40px;
+}
+nav .nav-items li{
+  list-style: none;
+  padding: 0 15px;
+}
+nav .nav-items li a{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+}
+nav .nav-items li a:hover{
+  color: #00a8a8;
+}
+nav .menu-icon{
+  width: 40px;
+  text-align: center;
+  margin: 0 50px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+nav .menu-icon span{
+  display: none;
+}
+@media (max-width: 1245px) {
+  nav{
+    padding: 0 50px;
+  }
+}
+@media (max-width: 1140px){
+  nav{
+    padding: 0px;
+  }
+  nav .logo{
+    flex: 2;
+    text-align: center;
+  }
+  nav .nav-items{
+    position: fixed;
+    z-index: 99;
+    top: 70px;
+    width: 100%;
+    left: -100%;
+    height: 100%;
+    padding: 10px 50px 0 50px;
+    text-align: center;
+    background: #1f6280;
+    display: inline-block;
+    transition: left 0.3s ease;
+  }
+  nav .nav-items.active{
+    left: 0px;
+  }
+  nav .nav-items li{
+    line-height: 40px;
+    margin: 30px 0;
+    float: right;
+  }
+  nav .nav-items li a{
+    font-size: 20px;
+  }
+  nav .menu-icon{
+    display: block;
+  }
+  nav .menu-icon span{
+    display: block;
+  }
+  nav .menu-icon span.hide{
+    display: none;
+  }
+}
+@media (max-width: 980px){
+  nav .menu-icon{
+    margin: 0 20px;
+  }
+}
+@media (max-width: 350px){
+  nav .menu-icon{
+    margin: 0 10px;
+    font-size: 16px;
+  }
+}
+/* 
+---------------------------------------------
+Form sign in & sign up style
+--------------------------------------------- 
+*/
+
+* {
+    font-size:100%;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+  background:#fff;
+}
+
+* {
+  font-family:"Helvetica Neue", Helvetica, Arial;
+}
+
+.sign h5, u{
+  text-align:center;
+  color:#1f6280;
+  font-size: 15px;
+}
+
+.sign form {
+  /* background:#fff; */
+  border-radius:6px;
+  padding:20px;
+  padding-top:30px;
+  width:300px;
+  margin:60px auto;
+  /* box-shadow:15px 15px 0px rgba(0,0,0,.1); */
+}
+
+.sign h1 {
+  text-align:center;
+  font-size:2em;
+  font-weight:700;
+  color:#1f6280;
+  margin-bottom:15px;
+}
+
+.sign p {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: #1f6280;
+}
+
+form label{
+  text-align: left;
+  color: #1f6280;
+  font-size: 15px;
+}
+
+input {
+  width:100%;
+  background:#fff;
+  padding:20px;
+  /* border-radius:6px; */
+  margin-bottom:20px;
+  margin-top: 5px;
+  border:1px solid #1f6280;
+}
+
+.btn {
+  position:relative;
+  width:100%;
+  padding:20px;
+  border:0;
+  background:#1f6280;
+  font-size:1.2em;
+  color:#fff;
+  text-shadow:1px 1px 0px rgba(0,0,0,.1);
+  margin-bottom:20px;
+}
+
+.btn:active {
+  top:3px;
+  box-shadow:none;
+}
+
+select {
+  width:100%;
+  background:#fff;
+  padding:20px;
+  /* border-radius:6px; */
+  margin-bottom:20px;
+  margin-top: 5px;
+  border:1px solid #1f6280;
+}
+/* 
+---------------------------------------------
+index page style
+--------------------------------------------- 
+*/
+
+main {
+  /* background-color: #fff; */
+  min-height: calc(100vh - 100px);
+  margin: 50px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 5px 0;
+}
+
+.container.index_page {
+  padding: 20px;
+  border-radius: 5px;
+  text-align: right;
+}
+
+.container1 {
+  margin-top: 50px;
+  padding: 20px;
+  border-radius: 5px;
+  width: auto;
+}
+
+.container1 h1,p{
+  text-align: right;
+  margin-bottom: 20px;
+  color: #1f6280;
+}
+
+.container1 h1{
+  font-size: 2em;
+}
+
+/* button index page */
+
+.signin, .signup {
+  position:relative;
+  width:100px;
+  padding:10px;
+  border:0;
+  background:#1f6280;
+  font-size:1.2em;
+  color:#fff;
+  text-shadow:1px 1px 0px rgba(0,0,0,.1);
+  margin-bottom:20px;
+  cursor: pointer;
+}
+
+.container.main-button a:link,a:visited{
+    background-color: #1f6280;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.container.main-button a:hover, a:active {
+  background-color: #00a8a8;
+}
+
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.content header{
+  font-size: 30px;
+  font-weight: 700;
+}
+.content .text{
+  font-size: 30px;
+  font-weight: 700;
+}
+.space{
+  margin: 10px 0;
+}
+nav .logo.space{
+  color: red;
+  padding: 0 5px 0 0;
+}
+@media (max-width: 980px){
+  nav .menu-icon,
+  nav .cancel-icon,
+  nav .search-icon{
+    margin: 0 20px;
+  }
+  nav form{
+    right: 30px;
+  }
+}
+@media (max-width: 350px){
+  nav .menu-icon,
+  nav .cancel-icon,
+  nav .search-icon{
+    margin: 0 10px;
+    font-size: 16px;
+  }
+}
+
+/*--------------------------------------
+   About page Style 
+----------------------------------------*/
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.content header{
+  font-size: 30px;
+  font-weight: 700;
+}
+.content .text{
+  font-size: 30px;
+  font-weight: 700;
+}
+.content .space{
+  margin: 10px 0;
+}
+
+/*--------------------------------------
+   Curriculum Page Style 
+----------------------------------------*/
+
+#kurikulum {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#kurikulum td, #kurikulum th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#kurikulum tr:nth-child(even){background-color: #f2f2f2;}
+
+#kurikulum tr:hover {background-color: #ddd;}
+
+#kurikulum th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #1f6280;
+  color: white;
+}
+
+#kurikulum tr input[type=submit] {
+  width: 100%;
+  background-color: #00a8a8;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#kurikulum tr input[type=submit]:hover {
+  background-color: #4d4c4c;
+}
+
+.container.tiga-menu{
+  margin-top: 20px;
+}
+.container.tiga-menu ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #fff;
+}
+.container.tiga-menu li{
+  list-style: none;
+  padding: 0 15px;
+  float: left;
+}
+.container.tiga-menu li a{
+  display: block;
+  color: #1f6280;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.container.tiga-menu li a:hover:not(.active) {
+  background-color: #00a8a8;
+}
+
+.container.tiga-menu.active {
+  background-color: #04AA6D;
+}
+
+/*--------------------------------------
+   Dashboard User Style 
+----------------------------------------*/
+
+.grid-menu {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 300px 300px;
+  grid-gap: 30px;
+  background-color: #fff;
+  padding: 50px;
+  justify-content: center;
+}
+
+.grid-menu > div {
+  background-color: #00a8a8;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.grid-menu .icon {
+  margin: 0 auto;
+  width: 30%;
+  margin-top: 30px;
+}
+.grid-menu .deskripsi {
+  padding: 30px;
+  color: white;
+}
+
+/*--------------------------------------
+   Footer Style 
+----------------------------------------*/
+  .footer {
+    position: relative;
+    background-color: #1f6280;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .footer span {
+    color: white;
+  }
+
+  
